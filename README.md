@@ -80,6 +80,30 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
 
 
 
+# [설치 및 삭제]
+- ### [How to](https://conory.com/blog/42585)
+- 자체 소스파일 컴파일로 설치
+    - https://www.rosehosting.com/blog/how-to-install-tar-gz-in-centos/
+- 패키지 방식 설치
+    - 패키지 설치 확인 : 
+    ```
+    rpm -qa | grep -i [패키지 이름] # 대소문자 구분없이 확인
+    ```
+    - 패키지 설치
+    ```
+    rpm -Uvh [패키지 이름]
+    ```
+    - 패키지 제거
+    ```
+    rpm -ev [패키지 이름]
+    ```
+- 저장소를 통한 자동 설치 도구 이용
+    - 레드헷 계열 (Red Hat/Centos/Fedora)
+    ```
+    sudo yum install [패키지 이름] + tab (tab을 추가하게 되면 해당 이름을 갖고있는 모든 패키지 검색)
+    ```
+
+- ### 삭제의 경우, 삭제 방식이 명시되어있지 않을경우, 모든 파일 및 폴더를 찾아 삭제
 
 
 

@@ -72,10 +72,82 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
 
     - [명령어 모음 link](https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C#mv)
 
+    - Manual
+        - 사용방법 확인 명령
+            ```
+            man {command}
+           ```
+        - ```
+            clear
+            ```
+    - Navigating file system
+        - 현재 경로 확인 및 출력
+            ```
+            pwd
+            ```
+        - 해당 경로를 탐색기로 열기
+            ```
+            nautilus {주소}
+            ```
+        - 현재 경로의 파일, 폴더 list up + long name (-l) + 숨김파일 포함 (-a)
+            ```
+            ls -la
+            ```
+        - 지정한 경로에서 찾고자 하는 이름을 갖고있는 파일 또는 폴더 찾기
+            ```
+            find {dir} -type file -name "*.txt"
+            find {dir} -type directory -name "*2"
+            ```
+        - 설치된 bin 실행 파일 찾기
+            ```
+            which atom
+            ```
+    - Create and Manage files
+        - 파일 생성
+            ```
+            touch {이름}
+            ```
+        - 해당 파일의 내용물 출력
+            ```
+            cat {파일명}
+            ```
+        - 재출력
+            ```
+            echo $MAIL
+            ```
+        - 파이프 : 명령과 명령을 이어줌으로써, 앞의 명령의 얻어지는 결과물을 뒷 명령어에 전달하는 행동
+            ```
+            ls -la |grep -i "python" 
+            
+            # 현재 경로에서 우선 파일, 폴더 listup 그리고 그 결과물 중에서 python 이라는 이름을 갖고있는 파일 또는 폴더 찾기 (대소문자 상관 없이)
+            ```
+        - 리다이렉트 : 표준 입출력의 방향 또는 위치를 바꾸는 행동
+            ```
+            ls -la > sample.txt 
+            # ls -la 명령어의 결과물을 sample.txt 파일에 입력 및 저장
+            ```
+        - 폴더 생성 / 복사 / 이동 / 삭제
+            ```
+            - mkdir
+            - cp {file} {to_dir}
+            - mv {file} {to_dir}
+            - rm -r {dir} # 해당 경로내의 모든 폴더 및 파일 삭제
+            ```
+        - 글자 찾기
+            ```
+            --> ll |grep
+            --> grep -n "world" *.txt : 라인수 같이 출력
+            --> grep -ni "world" *.txt : 라인수 같이 + 대소문자 상관없이
+            --> grep -nir "world" *.txt : 라인수 같이 + 대소문자 상관없이 + 해당 경로안의 모든 폴더의 모든 파일 대상
+            ```
+    - Work with environment variables
+        - 환경 변수 지정
+            ```
+            export {변수명}="{값}"
+            ```
+        - [환경변수 관리](https://sosobaba.tistory.com/279)
 
-- 파일 컨트롤
-	- sudo rm [파일명] : 삭제
-	- cd ~ : 홈 경로로 변경
+
 
 - sudo mount -all
 - gedit [파일명] : 해당 파일을 메모장으로 열기
@@ -84,13 +156,6 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
     - tab
 - tar.gz 파일을 통한 설치 (build 가 필요한 경우)
 https://www.rosehosting.com/blog/how-to-install-tar-gz-in-centos/
-
-
-- nautilus [경로] : 해당 경로를 시작으로 파일 탐색기 열기
-
-
-- 환경 변수 관리
-https://sosobaba.tistory.com/279
 
 
 - 권한 부분
@@ -103,7 +168,9 @@ https://it-serial.tistory.com/3
 
 
 - 약자로 등록
-alias
+    ``` 
+    alias
+    ```
 
 
 - 실행하기 명령어
@@ -114,11 +181,30 @@ alias
 
 
 - 이제까지 입력했던 로그들
-history
-ex) history |grep
-
+    ```
+    history
+    ex) history |grep
+    ```
 
 
 - 터미널에 있는 출력값들 clipboard에 저장
-xclip사용 : .bashrc 또는 .bash_profile 에 alias로 등록해서 사용하는것을 추천
+    - xclip사용 : .bashrc 또는 .bash_profile 에 alias로 등록해서 사용하는것을 추천
+        ```
+        alias cc="xargs echo -n | xclip -selection clipboard"
+        alias vv="xclip -o selection clipboard"
+        ```
+
+- crontab
+    - 지정된 crontab list up
+    ```
+    crontab -l
+    ```
+    - crontab edit
+    ```
+    crontab -e
+    ```
+- rsync
+    ```
+    rsync -avz --exclude '.git' --exclude '.gitmessage' --delete /usersetup/pipeline/users/taiyeong/linux/Documents/ /home/taiyeong.song/Documents/my_git/LinuxControll
+    ```
 

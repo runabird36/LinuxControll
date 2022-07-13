@@ -48,7 +48,24 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
 
 
 
-
+# [경로]
+- 윈도우에서는 바탕화면, 내문서, 다운로드등의 폴더들이 있는 경로
+    ```
+    # ~ 하고 동일 
+    /home/tiayeong.song
+    ```
+- 윈도우에서는 .exe 파일들이 있는 경로
+    ```
+    /bin
+    /usr/bin
+    ```
+    
+- 윈도우에서는 설치했을때 필요한 모든 파일들을 넣어두는 경로
+    ```
+    /lib        /lib64
+    /usr/lib    /usr/lib64
+    ```
+    ** 리눅스에서는 .run / .rpm / .tar.gz 으로 설치시 알아서 bin 과 lib 으로 나누어서 들어가는듯
 
 
 
@@ -195,6 +212,9 @@ https://it-serial.tistory.com/3
         ```
 
 - crontab
+    - 정의 : 윈도우의 스케줄러 같은 기능
+    - [How to](https://www.lesstif.com/lpt/linux-scheduler-crontab-77955238.html)
+    - [시간 표현](https://crontab.guru/)
     - 지정된 crontab list up
     ```
     crontab -l
@@ -203,7 +223,8 @@ https://it-serial.tistory.com/3
     ```
     crontab -e
     ```
-- rsync
+- rsync : 동기화 기능
+    - [How to](https://www.manualfactory.net/10204)
     ```
     rsync -avz --exclude '.git' --exclude '.gitmessage' --delete /usersetup/pipeline/users/taiyeong/linux/Documents/ /home/taiyeong.song/Documents/my_git/LinuxControll
     ```

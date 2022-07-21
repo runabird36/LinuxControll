@@ -44,6 +44,16 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
     - [how to Link](https://blog.naver.com/jcss456/221328104556)
 
     ** linux는 기본적으로 nouveau 그래픽 카드 사용
+    
+- 단축키 설정
+    - open directory : nautilus .
+    - open terminal : gnome-terminal
+    - open text editor : gedit
+    - save a screenshot of an area to Pictures
+    
+- 한글 설정 / time zone
+    
+- vscode / git
 
 
 

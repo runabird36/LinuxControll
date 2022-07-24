@@ -101,55 +101,23 @@
             ```
         - 글자 찾기
             ```
-            --> ll |grep
-            --> grep -n "world" *.txt : 라인수 같이 출력
-            --> grep -ni "world" *.txt : 라인수 같이 + 대소문자 상관없이
-            --> grep -nir "world" *.txt : 라인수 같이 + 대소문자 상관없이 + 해당 경로안의 모든 폴더의 모든 파일 대상
+            find-string
             ```
     - Work with environment variables
         - 환경 변수 지정
             ```
-            export {변수명}="{값}"
+            set --> printenv
+            setx {변수명}="{값}"
             ```
         - [환경변수 관리](https://sosobaba.tistory.com/279)
 
 
 
-- sudo mount -all
-- gedit [파일명] : 해당 파일을 메모장으로 열기
-- wget [인터넷상 파일 주소] : 해당 파일 인터넷에서 다운로드
-- sudo yum install [설치파일 이름] : 설치
-    - tab
-- tar.gz 파일을 통한 설치 (build 가 필요한 경우)
-https://www.rosehosting.com/blog/how-to-install-tar-gz-in-centos/
-
-
-- 권한 부분
-https://recipes4dev.tistory.com/175
-chown : 그룹 권한에 대한 면경 : change own 약자
-
-
-- 설치된것 찾기 경로찾기
-https://it-serial.tistory.com/3
-
-
-- 약자로 등록
-    ``` 
-    alias
-    ```
-
-
-- 실행하기 명령어
-		- sh filname.sh 을 하게 되면 해당 .sh 파일 실행
-
-		- .sh 파일이 아니면 그냥 해당 파일 명 또는 source filname 으로 실행 가능
 
 
 
 - 이제까지 입력했던 로그들
     ```
-    history
-    ex) history |grep
     ```
 
 
@@ -160,21 +128,6 @@ https://it-serial.tistory.com/3
         split-path cd |clip (poweshell)
         ```
 
-- crontab
-    - 정의 : 윈도우의 스케줄러 같은 기능
-    - [How to](https://www.lesstif.com/lpt/linux-scheduler-crontab-77955238.html)
-    - [시간 표현](https://crontab.guru/)
-    - 지정된 crontab list up
-    ```
-    crontab -l
-    ```
-    - crontab edit
-    ```
-    crontab -e
-    ```
-- rsync : 동기화 기능
-    - [How to](https://www.manualfactory.net/10204)
-    ```
-    rsync -avz --exclude '.git' --exclude '.gitmessage' --delete /usersetup/pipeline/users/taiyeong/linux/Documents/ /home/taiyeong.song/Documents/my_git/LinuxControll
-    ```
+
+
 

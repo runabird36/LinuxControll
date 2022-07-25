@@ -62,20 +62,25 @@
             ```
         - 현재 경로의 파일, 폴더 list up + long name (-l) + 숨김파일 포함 (-a)
             ```
+            ls -force
             dir
             ```
         - 지정한 경로에서 찾고자 하는 이름을 갖고있는 파일 또는 폴더 찾기
             ```
+            get-childitem -File -Filter "*.txt" -Recurse
             ```
         - 설치된 bin 실행 파일 찾기
             ```
+            get-command {.exe 실행파일}
             ```
     - Create and Manage files
         - 파일 생성
             ```
+            new-item (touch)
             ```
         - 해당 파일의 내용물 출력
             ```
+            cat
             ```
         - 재출력
             ```
@@ -83,7 +88,7 @@
             ```
         - 파이프 : 명령과 명령을 이어줌으로써, 앞의 명령의 얻어지는 결과물을 뒷 명령어에 전달하는 행동
             ```
-            dir |find-string -i "python" 
+            dir |select-string *, */*, *.py -pattern "python"
             
             # 현재 경로에서 우선 파일, 폴더 listup 그리고 그 결과물 중에서 python 이라는 이름을 갖고있는 파일 또는 폴더 찾기 (대소문자 상관 없이)
             ```
@@ -101,7 +106,12 @@
             ```
         - 글자 찾기
             ```
-            find-string
+            <powershell>
+            select-string
+            select-string *, */*, *.py -pattern "blacklist"
+
+            <prompt>
+            findstr <search-string> <filename>
             ```
     - Work with environment variables
         - 환경 변수 지정
@@ -118,6 +128,8 @@
 
 - 이제까지 입력했던 로그들
     ```
+    doskey /history (prompt)
+    Get-history (powershell)
     ```
 
 

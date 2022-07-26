@@ -73,6 +73,9 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
     ** linux는 기본적으로 nouveau 그래픽 카드 사용
 
 
+- [lustre 설치 방법](https://docs.aws.amazon.com/ko_kr/fsx/latest/LustreGuide/install-lustre-client.html)
+
+
 - 경로 / 환경변수 / lustre / repository 등 환경 구성을 어떻게 할지 설계
     
 

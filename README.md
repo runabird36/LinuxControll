@@ -1,7 +1,38 @@
-# [centos 기초]
+# [centos(Rocky) 설치]
+
+- 우선 공식 홈페이지에서, os를 usb에 베이크
+
+- 컴퓨터에 usb 연결 후, 부팅 초기에 F8 (아닐 경우 F7~F11다 눌러보기) 눌러서, 설치할 os 설치
+
+- 파티션 설치등 여러가지 셋팅해서 gui 모드로 켜지기까지 하기
+    - 파티션
+    - 언어
+    - 네트워크
+    - root / client 계정 생성
 
 
-- 만약 외부 서버 경로가 있다면 경로를 mount 하기
+
+- 단축키들 설정 :
+    - open terminal : gnome-terminal ----------------------> ctrl+shift+enter
+    - open Chrome : $ google-chrome ------> ctrl+shift+F1
+    - open 메모장  : gedit ----------------------------------------------> ctrl+shift+/
+    - open nautilus : nautilus . ----------------------------------------------> ctrl+shift+(+)
+    - screen shot --> save a screenshot of an area to Pictures ------------------------> ctrl+shift+(*)
+
+
+
+- 한글 설정 / time zone
+    
+- vscode / git 설치 
+    - vscode : 공식 홈페이지에서 .rpm 파일 받아와서 rpm 명령어로 실행 및 설치
+        - python / json / markdown 관련 플러그인 설치
+    - git : yum install git
+
+
+- 그래픽 드라이버를 defautl인 nouveau에서 nvidia 것으로 바꾸기
+
+
+- 만약 외부 서버 경로가 있다면, lustre관련 기능을 설치 이후, 경로를 mount 하기
 	- 비어있는 폴더 만들기 --> 경로들을 연결해서 mount 하기
     - sudo mount -all
 
@@ -9,15 +40,11 @@
 https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8C%8C%EC%9D%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B5%AC%EC%A1%B0-%EB%A3%A8%ED%8A%B8-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%ED%99%88-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC
 
 - sudo mount -all
+
+
+- python 이 default 로 3.6이 깔려있는데, 모든 파이썬 삭제이후, 필요한 버전으로 셋팅
 - python2.7.5
 
-
-- 단축키들 설정 :
-    - open terminal ----------------------> ctrl+shift+enter
-    - open Chrome : $ google-chrome ------> ctrl+shift+F1
-    - open 메모장  ----------------------------------------------> ctrl+shift+/
-    - open nautilus  ----------------------------------------------> ctrl+shift+(+)
-    - screen shot ------------------------> ctrl+shift+(*)
 
 
 - 윈도우 단축키
@@ -25,8 +52,6 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
     - 전체 화면  : super + 위
     - 최소화 화면 : super + 아래
     - 화면 내리기 : super + h
-
-
 
 
 
@@ -42,18 +67,17 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
 - nvidia 그래픽 드라이버 새롭게 연결 필요
 
     - [how to Link](https://blog.naver.com/jcss456/221328104556)
+    - [tdcourse의 how to](https://github.com/lazypic/tdcourse/blob/8d99508a02f9dbfd35e0189ff44febd44a89bd5a/docs/install_nvidia.md)
+    - [rocky 하면서 반영한 내것 how to](https://github.com/runabird36/LinuxControll/blob/main/01_install_nvidia.md)
 
     ** linux는 기본적으로 nouveau 그래픽 카드 사용
+
+
+- 경로 / 환경변수 / lustre / repository 등 환경 구성을 어떻게 할지 설계
     
-- 단축키 설정
-    - open directory : nautilus .
-    - open terminal : gnome-terminal
-    - open text editor : gedit
-    - save a screenshot of an area to Pictures
-    
-- 한글 설정 / time zone
-    
-- vscode / git
+
+
+
 
 
 
@@ -107,7 +131,7 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
     ```
     rpm -ev [패키지 이름]
     ```
-- 저장소를 통한 자동 설치 도구 이용
+- 저장소를 통한 자동 설치 도구 이용 == dnf (최신버전)
     - 레드헷 계열 (Red Hat/Centos/Fedora)
     ```
     sudo yum install [패키지 이름] + tab (tab을 추가하게 되면 해당 이름을 갖고있는 모든 패키지 검색)

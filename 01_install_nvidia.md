@@ -1,3 +1,5 @@
+### 출처 : https://github.com/lazypic/tdcourse/blob/8d99508a02f9dbfd35e0189ff44febd44a89bd5a/docs/install_nvidia.md
+
 # 그래픽카드 드라이버 셋팅
 
 

@@ -74,6 +74,7 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
 
 
 - [lustre 설치 방법](https://docs.aws.amazon.com/ko_kr/fsx/latest/LustreGuide/install-lustre-client.html)
+- [lustre 설치 방법](https://github.com/runabird36/LinuxControll/blob/main/02_%EC%A0%84%EC%B2%B4%EC%A0%81%EC%9D%B8_%EC%84%A4%EC%B9%98_%EB%AA%85%EB%A0%B9%EC%96%B4%EB%93%A4.md)
 
 
 - 경로 / 환경변수 / lustre / repository 등 환경 구성을 어떻게 할지 설계

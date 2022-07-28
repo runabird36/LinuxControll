@@ -113,7 +113,9 @@ nouveau가 설정되지 않았기 때문에 GNOME 데스크탑 접근시 화면�
 --> /var/.../~.log내용에서 어떤것이 설치가 안되어있는지등의 메세지를 확인해서 진행
 ```bash
 # cd ~/Downloads
-# bash ./NVIDIA-Linux-x86_64-410.78.run
+# bash ./NVIDIA-Linux-x86_64-410.78.run   
+                      --> 설치도중 에러가 나오면, 안내해주는대로, 
+                          /var/log/nvidi~.log 이름의 파일을 찾아 해당 로그를 보고 필요한것을 yum install
 # reboot
 ```
 

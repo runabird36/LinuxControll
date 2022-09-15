@@ -101,6 +101,9 @@
             ```
             - mkdir
             - cp {file} {to_dir}
+            - xcopy {some_source_dir} {new_destination_dir} /E/H 
+                - /E - Copy all subdirectories
+                - /H - Copy hidden files too (e.g. .git)
             - mv {file} {to_dir}
             - rm -r {dir} # 해당 경로내의 모든 폴더 및 파일 삭제
             ```

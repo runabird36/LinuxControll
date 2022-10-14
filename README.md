@@ -290,4 +290,20 @@ https://it-serial.tistory.com/3
     ```
     rsync -avz --exclude '.git' --exclude '.gitmessage' --delete /usersetup/pipeline/users/taiyeong/linux/Documents/ /home/taiyeong.song/Documents/my_git/LinuxControll
     ```
+# [Desktop icon으로 등록]
+- ### [How to](https://www.maketecheasier.com/create-desktop-file-linux/)
+```
+cd /home/taiyeong.song/.local/share/applications
 
+cat ./GiantstepTools.desktop 
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Exec=/.../application_launcher.sh
+Name=Application Launcher
+Actions=new-window:private-window:
+Icon=/.../window_icon.png
+Categories=Giantstep
+
+```

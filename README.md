@@ -291,7 +291,7 @@ https://it-serial.tistory.com/3
     rsync -avz --exclude '.git' --exclude '.gitmessage' --delete /usersetup/pipeline/users/taiyeong/linux/Documents/ /home/taiyeong.song/Documents/my_git/LinuxControll
     ```
 # [Desktop icon으로 등록]
-- ### [How to](https://www.maketecheasier.com/create-desktop-file-linux/)
+- ## [How to](https://www.maketecheasier.com/create-desktop-file-linux/)
 ```
 cd /home/taiyeong.song/.local/share/applications
 
@@ -307,3 +307,6 @@ Icon=/.../window_icon.png
 Categories=Giantstep
 
 ```
+
+# [Linux에서 Cmake]
+- ## [How to](https://ksr930.tistory.com/m/106)

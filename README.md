@@ -116,6 +116,17 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
 - .profile
 
 
+# [ 리눅스에 시스템적으로 변경된 사항 반영 방법]
+- ~/.bashrc 등의 파일을 반영
+```
+source ~/.bashrc
+```
+- 컴퓨터 끄지않고 재부팅
+```
+alt+f2 이후 r 입력
+```
+
+
 
 
 # [설치 및 삭제]

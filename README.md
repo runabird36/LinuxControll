@@ -323,4 +323,6 @@ Categories=Giantstep
 	- find / -type f -name "libQt5DesignerComponents*"      --> 해당 모듈이있는경로 찾기
 	- cp ./designer ./Qt/lib/ 해당 경로에 /usr/lib/.../site-packages/PySide2/designer를 복사에서 넣기
 - step 04. 복사해서 넣은 designer로 실행
+- step 05. ~/.bashrc에 alias로 등록
+	- alias designer="/usr/local/lib64/python3.6/site-packages/PySide2/Qt/lib/designer"
 	

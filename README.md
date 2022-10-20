@@ -310,3 +310,17 @@ Categories=Giantstep
 
 # [Linux에서 Cmake]
 - ## [How to](https://ksr930.tistory.com/m/106)
+
+# [Linux에서 qt designer사용]
+- ## [에러가 나오면](https://forums.rockylinux.org/t/installing-pyqt-libraries/4788/2)
+- step 01. default로 설치되어있는 pip3를 통해서 PySide2 설치 --> pip3 install pyside2
+- step 02. 아래와같은 메세지 나오면 --> yum install libQt5DesignerComponents.so.5
+```
+./designer: error while loading shared libraries: libQt5DesignerComponents.so.5: cannot open shared object file: No such file or directory
+
+```
+- step 03. 위 "에러가 나오면"을 따라했는데도 안되면, 
+	- find / -type f -name "libQt5DesignerComponents*"      --> 해당 모듈이있는경로 찾기
+	- cp ./designer ./Qt/lib/ 해당 경로에 /usr/lib/.../site-packages/PySide2/designer를 복사에서 넣기
+- step 04. 복사해서 넣은 designer로 실행
+	

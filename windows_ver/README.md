@@ -9,7 +9,16 @@
     - open text editor : ctrl + shift + /
     - save a screenshot of an area to Pictures
 
-
+# [환경변수 활용]
+- 환경변수 지정
+    - 환경변수 창에서 직접 지정
+    
+- shell창에서 환경변수 사용
+    ```
+    # $env:변수명 으로 사용
+    cd $env:projects
+    cd $env:home
+    ```
 
 
 # [경로]

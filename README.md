@@ -14,11 +14,11 @@
 
 - 단축키들 설정 :
     - open terminal : gnome-terminal ----------------------> ctrl+shift+enter
-    - open Chrome : $ google-chrome ------> ctrl+shift+F1
+    - open Chrome : $ google-chrome ------> ctrl+shift+1
     - open 메모장  : gedit ----------------------------------------------> ctrl+shift+/
     - open nautilus : nautilus . ----------------------------------------------> ctrl+shift+(+)
     - screen shot --> save a screenshot of an area to Pictures ------------------------> ctrl+shift+(*)
-
+    - open tweak : gnome-tweaks --------------------------------------> ctrl+shift+2
 
 
 - 한글 설정 / time zone

@@ -337,3 +337,22 @@ Categories=Giantstep
 - step 05. ~/.bashrc에 alias로 등록
 	- alias designer="/usr/local/lib64/python3.6/site-packages/PySide2/Qt/lib/designer"
 	
+	
+# [Linux에서 qt designer사용2] : 해당방법 추천
+- ## [에러가 나오면](https://forums.rockylinux.org/t/installing-pyqt-libraries/4788/2)
+- step 01. default로 설치되어있는 pip3를 통해서 PySide2 설치 --> pip3 install pyside2
+- step 02. 아래와같은 메세지 나오면 
+```
+./designer: error while loading shared libraries: libQt5DesignerComponents.so.5: cannot open shared object file: No such file or directory
+
+```
+	- /usr/local/lib64/python3.6/site-packages/PySide2 경로에 designer가 있는지 확인
+	- /usr/local/lib64/python3.6/site-packages/PySide2/Qt/lib 경로에 libQt5DesignerComponents.so.5 가 있는지 확인
+	- 둘다 있으면, designer를 libQt5DesignerComponents.so.5 가 있는 경로로 복사
+		- cp /usr/local/lib64/python3.6/site-packages/PySide2/desigern /usr/local/lib64/python3.6/site-packages/PySide2/Qt/lib/
+
+- step 03. 복사해서 넣은 designer로 실행
+- step 04. ~/.bashrc에 PATH 환경 변수에 추가
+	- export PATH=PATH:/usr/local/lib64/python3.6/site-packages/PySide2/Qt/lib/designer
+	
+	

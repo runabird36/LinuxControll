@@ -10,6 +10,28 @@
     - open terminal : ctrl + shift + \
     - open text editor : ctrl + shift + /
     - save a screenshot of an area to Pictures
+    
+# [ powershell 테마 설정]
+- [step 1. wsl-ubuntu와 터미널 앱 설치](https://proni.tistory.com/entry/Windows-Terminal-%EC%BB%AC%EB%9F%AC-%ED%85%8C%EB%A7%88-%EC%84%A4%EC%A0%95-at-Windows)
+- [step 2. Oh My Posh 설치](https://ddochea.tistory.com/190)
+    ```
+    winget install JanDeDobbeleer.OhMyPosh
+    ```
+- step 3. oh my posh 환경변수 등록
+   ```
+   C:\Users\runab\AppData\Local\Programs\oh-my-posh
+                                                  ./bin --> path에 등록
+                                                  ./theme --> poshtheme이라는 변수로 등록
+   ```
+- step 4. powershell 시작 스크립트 입력
+   ```
+   notepad $PROFILE --> 메모장 나오면 아래의 문구 입력
+   
+   oh-my-posh --init --shell pwsh --config $env:poshtheme/{원하는 theme}.json | Invoke-Expression
+   ```
+- [폰트 안나올때](https://www.nerdfonts.com/font-downloads)
+- [테마 미리보기](https://ohmyposh.dev/docs/themes#1_shell)
+
 
 # [환경변수 활용]
 - 환경변수 지정

@@ -185,6 +185,7 @@ alt+f2 이후 r 입력
             ```
         - 지정한 경로에서 찾고자 하는 이름을 갖고있는 파일 또는 폴더 찾기
             ```
+            find /opt/arnold_usd -name {파일 or 폴더명}
             find {dir} -type file -name "*.txt"
             find {dir} -type directory -name "*2"
             ```

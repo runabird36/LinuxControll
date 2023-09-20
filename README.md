@@ -19,6 +19,7 @@
     - open nautilus : nautilus . ----------------------------------------------> ctrl+shift+(+)
     - screen shot --> save a screenshot of an area to Pictures ------------------------> ctrl+shift+(*)
     - open tweak : gnome-tweaks --------------------------------------> ctrl+shift+2
+    - do flameshot : flameshot gui -d 300 ---------------------------> ctrl+1
 
 
 - 한글 설정 / time zone

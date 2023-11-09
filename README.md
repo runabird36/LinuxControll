@@ -54,7 +54,9 @@ https://dana-study-log.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%8
     - 최소화 화면 : super + 아래
     - 화면 내리기 : super + h
 
-
+- dnf 설치 리스트
+    - dnf install gnome-shell-extension-dash-to-dock
+    - dnf install xcplip?
 
 
 
